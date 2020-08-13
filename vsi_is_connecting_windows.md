@@ -60,5 +60,5 @@ In Linux Terminal: `cat encrypted_pwd.txt | base64 -d > decoded_pwd.txt`
 In Windows Powershell: `certutil -decode .\EncPass.txt DecPass.txt`
 1. Decrypt the decoded password by using the following openssl command: 
 In Linux: `/<location_of_openssl_executable> pkeyutl -in decoded_pwd.txt -decrypt -inkey ~/.ssh/id_rsa`
-In Windows: `pkeyutl -in decoded_pwd.txt -decrypt -inkey private-key.pem` | Note: The private-key needs to be in .pem format, you can use PuttyGen to export privatekey in .pem format from a pks file.
+In Windows Powershell: `pkeyutl -in decoded_pwd.txt -decrypt -inkey private-key.pem` | Note: The private-key needs to be in .pem format, you can use PuttyGen to export privatekey in .pem format from a pks file.
 1. Use the returned value as the Administrator password in Remote Desktop. Enter the public IP address of the Windows instance into the Remote Desktop client.
